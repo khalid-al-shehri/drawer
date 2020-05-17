@@ -12,7 +12,7 @@ Widget drawer(BuildContext context) {
   return Container(
 //    margin: EdgeInsets.only(top: heightAppBarStatus),
       decoration: BoxDecoration(
-          color: Colors.grey[200]
+          color: Colors.white
       ),
       width: width < 650 ? MediaQuery.of(context).size.width * 0.80 : MediaQuery.of(context).size.width * 0.33,
       child: SafeArea(

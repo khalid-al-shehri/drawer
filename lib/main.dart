@@ -1,5 +1,7 @@
+import 'package:drawer/page2.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
+import 'drawer2.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,10 +32,23 @@ class _appState extends State<app> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello World"),
+        title: Text("Drawer"),
       ),
       endDrawer: Container(
           child: drawer(context)
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.arrow_forward
+        ),
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => page2()
+            ),
+          );
+        },
       ),
     );
   }
